@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compliment 2.0</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="petals-container"></div>
+
+    <section id="screen-chat" class="screen active chat-bg">
+        <div class="chat-container">
+            <div class="message sent">I made something for you💗</div>
+            <div class="message received">For me??👀</div>
+            <div class="message sent clickable" onclick="nextScreen('screen-start')">
+                <span class="search-icon">🔍</span> Only for you🥰
+            </div>
+        </div>
+    </section>
+
+    <section id="screen-start" class="screen pink-bg">
+        <h1 class="cursive">Just for you</h1>
+        <div class="heart-container" onclick="nextScreen('screen-loading')">
+            <div class="heart-button">❤️</div>
+            <p class="tap-hint">Tap to open</p>
+        </div>
+    </section>
+
+    <section id="screen-loading" class="screen pink-bg">
+        <div class="scan-circle">
+            <div class="inner-heart">❤️</div>
+            <div class="scan-line"></div>
+        </div>
+        <p id="status-text" class="status-msg">Scanning...</p>
+    </section>
+
+    <section id="screen-report" class="screen pink-bg">
+        <div class="report-box">
+            <div class="report-header">OFFICIAL REPORT</div>
+            <div class="report-date">18 Feb 2026</div>
+            <div class="report-content">
+                <div class="line">ITEM: <span>YOU</span></div>
+                <div class="line">CUTENESS: <span>UNLIMITED</span></div>
+                <div class="line">SWEETNESS: <span>OVERLOAD</span></div>
+                <div class="line">VIBE: <span>PERFECT</span></div>
+            </div>
+            <div class="total-score">TOTAL: 100% LOVELY</div>
+            <button class="btn-main" onclick="nextScreen('screen-final')">One last thing</button>
+        </div>
+    </section>
+
+    <section id="screen-final" class="screen pink-bg">
+        <div class="cat-container">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJueGZueXF4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4JnB0PWEmZXA9djFfaW50ZXJuYWxfZ2lmX2J5X2lkJmN0PXM/3o7TKoWXlo3MGu6FeU/giphy.gif" alt="Cute Cat">
+            <h2 class="cursive">You're the best!</h2>
+            <p>Don't ever forget it.</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
